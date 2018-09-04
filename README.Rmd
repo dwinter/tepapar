@@ -1,0 +1,48 @@
+---
+output:
+  md_document:
+    variant: markdown_github
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# Interact with the Te Papa Collections API within R
+
+
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
+
+# tepapar
+
+This is a stem of a project on working with the [Te Papa collections
+API](https://blog.tepapa.govt.nz/2018/08/30/make-cool-stuff-with-our-collections-using-our-api/) from
+within R. At the moment it only includes some basic functions to generate user
+keys and make simple requests. If you'd like to help make it better please do
+so!
+
+
+
+## Example
+
+At present teh onyl 'high-level' function is `tp_taxon` which is for searching
+for taxonomy records:
+
+```{r example}
+tiny_snails <- tp_taxon("allodiscus")
+tiny_snails
+```
+
+As the printed information suggests, the `results` object contains information
+on all of these matches
+
+```{r}
+head(tiny_snails$results,3)
+```
+
+
+
