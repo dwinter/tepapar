@@ -27,12 +27,16 @@ so!
 
 
 
+
 ## Example
+
+If you want to play around with this 
 
 At present teh onyl 'high-level' function is `tp_taxon` which is for searching
 for taxonomy records:
 
 ```{r example}
+library(tepapar)
 tiny_snails <- tp_taxon("allodiscus")
 tiny_snails
 ```
